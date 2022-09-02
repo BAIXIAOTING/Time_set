@@ -87,12 +87,12 @@ def real_data_loading (data_name, seq_len):
   Returns:
     - data: preprocessed data.
   """  
-  assert data_name in ['stock','energy']
+  assert data_name in ['power','energy']
   
   if data_name == 'power':
-    ori_data = np.loadtxt('TimeGAN-master/data/power_data.csv', delimiter = ",",skiprows = 1)
+    ori_data = np.loadtxt('TimeGAN-master/data/power_data.csv', delimiter = ",",encoding='utf-8', skiprows = 1)
   elif data_name == 'energy':
-    ori_data = np.loadtxt('TimeGAN-master/data/energy_data.csv', delimiter = ",",skiprows = 1)
+    ori_data = np.loadtxt('TimeGAN-master/data/energy_data.csv', delimiter = ",",encoding='utf-8', skiprows = 1)
         
   # Flip the data to make chronological data
   ori_data = ori_data[::-1]
