@@ -45,7 +45,7 @@ def main (args):
   """Main function for timeGAN experiments.
   
   Args:
-    - data_name: sine, stock, or energy
+    - data_name: sine, power, or energy
     - seq_len: sequence length
     - Network parameters (should be optimized for different datasets)
       - module: gru, lstm, or lstmLN
